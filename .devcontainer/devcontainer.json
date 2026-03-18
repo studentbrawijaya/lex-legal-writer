@@ -1,0 +1,61 @@
+{
+  "name": "LEX v3.0 — Legal Excellence Writer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "James-Yu.latex-workshop",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "valentjn.vscode-ltex",
+        "torn4dom4n.latex-support"
+      ],
+      "settings": {
+        "latex-workshop.latex.autoBuild.run": "onSave",
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "pdflatex → bibtex → pdflatex × 2",
+            "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+          },
+          {
+            "name": "pdflatex",
+            "tools": ["pdflatex"]
+          }
+        ],
+        "latex-workshop.latex.tools": [
+          {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-output-directory=%OUTDIR%",
+              "%DOC%"
+            ],
+            "env": {}
+          },
+          {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": ["%OUTDIR%/%DOCFILE%"],
+            "env": {}
+          }
+        ],
+        "latex-workshop.latex.outDir": "%DIR%/out",
+        "latex-workshop.view.pdf.viewer": "tab",
+        "editor.wordWrap": "on",
+        "editor.rulers": [80],
+        "files.associations": {
+          "*.tex": "latex",
+          "*.bib": "bibtex"
+        }
+      }
+    }
+  },
+  "postCreateCommand": "mkdir -p artikel/out templates/out",
+  "remoteUser": "vscode",
+  "features": {}
+}
