@@ -1,0 +1,132 @@
+%============================================================
+%  LEX v3.0 — Template Artikel Jurnal Hukum
+%  Standard: Jurnal Konstitusi / Sinta 1 / Scopus Q1
+%  Gunakan /draft-subbab di Copilot Chat untuk mengisi bagian ini
+%============================================================
+
+\documentclass[12pt,a4paper]{article}
+
+%--- Paket utama ---
+\usepackage[bahasa]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}                % Font Times New Roman
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\doublespacing
+
+%--- Sitasi & Bibliografi ---
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue}
+
+%--- Visualisasi Akademik (LEX v3.0) ---
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, backgrounds}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{pgf-pie}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+
+%--- Format ---
+\usepackage{titlesec}
+\usepackage{abstract}
+\usepackage{enumitem}
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+
+%============================================================
+%  METADATA ARTIKEL
+%  Isi bagian ini terlebih dahulu sebelum menulis
+%============================================================
+\title{%
+  \textbf{[JUDUL ARTIKEL]}\\[0.5em]
+  \large [Subjudul jika ada]
+}
+
+\author{%
+  [Nama Penulis Pertama]\textsuperscript{1} \and
+  [Nama Penulis Kedua]\textsuperscript{2}\\[0.5em]
+  \small\textsuperscript{1}[Institusi, Email]\\
+  \small\textsuperscript{2}[Institusi, Email]
+}
+
+\date{Diterima: [tanggal] \quad Disetujui: [tanggal]}
+
+%============================================================
+\begin{document}
+\maketitle
+
+%------------------------------------------------------------
+\begin{abstract}
+\noindent
+% Perintah Copilot: /draft-subbab Abstrak
+% Target: 150-250 kata, bahasa Indonesia dan Inggris
+[Tulis abstrak di sini. Copilot akan menghasilkan teks setelah Anda menggunakan perintah /draft-subbab Abstrak]
+
+\medskip
+\noindent\textbf{Kata kunci:} [kata kunci 1]; [kata kunci 2]; [kata kunci 3]; [kata kunci 4]; [kata kunci 5]
+
+\medskip
+\noindent\textbf{Abstract:} [English abstract]
+
+\noindent\textbf{Keywords:} [keyword 1]; [keyword 2]; [keyword 3]; [keyword 4]; [keyword 5]
+\end{abstract}
+
+%------------------------------------------------------------
+\section{Pendahuluan}
+% Perintah Copilot: /draft-subbab Pendahuluan
+% Target: 1000-1500 kata
+% Struktur: latar belakang → rumusan masalah → tujuan → metode → sistematika
+% ATD: Norma Positif + Asas + Teori + Doktrin
+
+[Copilot akan mengisi bagian ini dengan perintah /draft-subbab Pendahuluan]
+
+%------------------------------------------------------------
+\section{Metode Penelitian}
+% Perintah Copilot: /draft-subbab Metode
+% Jenis penelitian, pendekatan, bahan hukum, teknik analisis
+
+[Copilot akan mengisi bagian ini dengan perintah /draft-subbab Metode]
+
+%------------------------------------------------------------
+\section{Pembahasan}
+
+\subsection{[Judul Subbab A]}
+% Perintah Copilot: /draft-subbab Pembahasan A
+% ATD WAJIB: Asas + Teori + Doktrin terintegrasi di setiap paragraf
+
+[Copilot akan mengisi bagian ini]
+
+\subsection{[Judul Subbab B]}
+% Perintah Copilot: /draft-subbab Pembahasan B
+% Sisipkan visualisasi dari templates/atd-diagram.tex atau templates/visualisasi.tex
+
+[Copilot akan mengisi bagian ini]
+
+\subsection{[Judul Subbab C]}
+% Perintah Copilot: /draft-subbab Pembahasan C
+
+[Copilot akan mengisi bagian ini]
+
+%------------------------------------------------------------
+\section{Penutup}
+
+\subsection{Kesimpulan}
+% Perintah Copilot: /draft-subbab Kesimpulan
+% Jawaban langsung atas rumusan masalah, tanpa pengulangan pembahasan
+
+[Copilot akan mengisi bagian ini]
+
+\subsection{Saran}
+% Perintah Copilot: /draft-subbab Saran
+% Rekomendasi kebijakan/legislasi konkret
+
+[Copilot akan mengisi bagian ini]
+
+%------------------------------------------------------------
+\bibliographystyle{apalike}
+\bibliography{../referensi/pustaka}
+
+\end{document}

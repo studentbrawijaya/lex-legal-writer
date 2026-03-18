@@ -31,3 +31,57 @@ Formula: `[Norma Positif] + [Asas] + [Teori] + [Doktrin] = [Analisis Kasus/Konst
 - Format: LaTeX (`.tex`) with `\footnote{}` citations
 - Citation style: McGill — `\footnote{Author, \textit{Title} (City: Publisher, Year), p. X.}`
 - Target length: minimum 12 A4 pages (7000–9000 words)
+
+---
+
+## Folder Structure
+
+```
+lex-legal-writer/
+├── .github/
+│   └── copilot-instructions.md   ← LEX v3.0 system prompt (loaded automatically by Copilot)
+├── templates/
+│   ├── artikel-utama.tex         ← Main LaTeX article template (jurnal hukum)
+│   ├── atd-diagram.tex           ← TikZ: ATD analysis diagram + flowchart
+│   └── visualisasi.tex           ← PGFPlots / pgf-pie / radar / booktabs templates
+├── artikel/                      ← Save your draft .tex files here
+│   └── .gitkeep
+├── referensi/
+│   └── pustaka.bib               ← BibTeX bibliography (add entries after /paper-discovery)
+└── README.md
+```
+
+### How to start a new article
+
+1. Copy `templates/artikel-utama.tex` into the `artikel/` folder and rename it (e.g. `artikel/hak-konstitusional-2024.tex`).
+2. Open GitHub Copilot Chat and run the workflow commands section by section:
+   ```
+   /paper-discovery [topik artikel Anda]
+   /research-gap
+   /draft-subbab Pendahuluan
+   /draft-subbab Pembahasan A
+   /draft-subbab Pembahasan B
+   /draft-subbab Kesimpulan
+   /audit-lex
+   ```
+3. Add entries returned by `/paper-discovery` to `referensi/pustaka.bib`.
+4. Copy any visualisation code from `templates/visualisasi.tex` or `templates/atd-diagram.tex` into your article where needed, or use `/generate-viz` to generate new ones.
+5. Compile with `pdflatex` then `bibtex` then `pdflatex` twice:
+   ```bash
+   pdflatex artikel/nama-artikel.tex
+   bibtex   artikel/nama-artikel
+   pdflatex artikel/nama-artikel.tex
+   pdflatex artikel/nama-artikel.tex
+   ```
+
+### Required LaTeX packages
+
+| Package | Purpose |
+|---|---|
+| `tikz` + libraries | ATD diagram & flowchart |
+| `pgfplots` | Bar/line charts |
+| `pgf-pie` | Pie charts |
+| `booktabs` | Professional comparison tables |
+| `pgfplots` polar library | Radar/spider charts |
+| `babel` (bahasa) | Indonesian hyphenation |
+| `times` | Times New Roman font |
