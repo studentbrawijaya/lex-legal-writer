@@ -12,9 +12,13 @@ The file [`.github/copilot-instructions.md`](.github/copilot-instructions.md) is
 |---|---|
 | `/paper-discovery [topik]` | Find 5–10 primary articles from reputable databases (MKRI, Garuda, Sciencedirect) and produce a Source Registry table. |
 | `/research-gap` | Analyse existing literature and identify 3 original research gaps (novelty). |
+| `/outline [topik]` | Generate a hierarchical article outline (Section → Sub-section → argument points) with ATD positions mapped to each sub-section. |
 | `/draft-subbab [nama bagian]` | Write a specific article section (e.g. Pendahuluan/Pembahasan B.1) targeting 1000–2000 words with strict ATD protocol. |
+| `/abstrak-dual` | Generate a bilingual abstract (Indonesian 150–200 words + English 150–200 words) with 5 keywords per language. |
+| `/cite-check` | Scan the entire draft, flag incomplete references with `[PERLU VERIFIKASI]`, and output a citation summary table (Author, Year, Status). |
 | `/audit-lex` | Review a draft, flag banned words, remove AI fluff, and verify ATD theory is present in every paragraph. |
 | `/generate-viz [jenis data]` | Convert statistical data into ready-to-compile LaTeX PGFPlots/TikZ code. |
+| `/response-reviewer [nomor komentar]` | Draft an academic response to a reviewer comment: summary → revision action → location in manuscript → counter-argument (if rejecting). |
 
 ## Core Framework: ATD Analysis
 
@@ -43,7 +47,9 @@ lex-legal-writer/
 ├── templates/
 │   ├── artikel-utama.tex         ← Main LaTeX article template (jurnal hukum)
 │   ├── atd-diagram.tex           ← TikZ: ATD analysis diagram + flowchart
-│   └── visualisasi.tex           ← PGFPlots / pgf-pie / radar / booktabs templates
+│   ├── visualisasi.tex           ← PGFPlots / pgf-pie / radar / booktabs templates
+│   ├── response-reviewer.tex     ← Revise & Resubmit response letter template
+│   └── surat-pengantar.tex       ← Cover letter template for journal submission
 ├── artikel/                      ← Save your draft .tex files here
 │   └── .gitkeep
 ├── referensi/
@@ -54,14 +60,18 @@ lex-legal-writer/
 ### How to start a new article
 
 1. Copy `templates/artikel-utama.tex` into the `artikel/` folder and rename it (e.g. `artikel/hak-konstitusional-2024.tex`).
-2. Open GitHub Copilot Chat and run the workflow commands section by section:
+2. Open GitHub Copilot Chat and run the workflow commands section by section.
+   Start with `/outline` to map the article structure and ATD positions before doing any writing or literature search — this prevents structural revisions later.
    ```
+   /outline [topik artikel Anda]
    /paper-discovery [topik artikel Anda]
    /research-gap
+   /abstrak-dual
    /draft-subbab Pendahuluan
    /draft-subbab Pembahasan A
    /draft-subbab Pembahasan B
    /draft-subbab Kesimpulan
+   /cite-check
    /audit-lex
    ```
 3. Add entries returned by `/paper-discovery` to `referensi/pustaka.bib`.
@@ -74,6 +84,17 @@ lex-legal-writer/
    pdflatex artikel/nama-artikel.tex
    ```
 
+### How to submit to a journal
+
+1. Copy `templates/surat-pengantar.tex`, fill in all `[ ]` placeholders, and compile as a PDF cover letter.
+2. Submit the compiled article PDF together with the cover letter PDF to the target journal.
+
+### How to respond to reviewers (Revise & Resubmit)
+
+1. Copy `templates/response-reviewer.tex` and paste each reviewer comment into the `reviewerbox` blocks.
+2. Use `/response-reviewer [nomor komentar]` in Copilot Chat to auto-generate each academic response.
+3. Fill in the Change Summary Table at the bottom to help the editor track all revisions.
+
 ### Required LaTeX packages
 
 | Package | Purpose |
@@ -85,3 +106,6 @@ lex-legal-writer/
 | `pgfplots` polar library | Radar/spider charts |
 | `babel` (bahasa) | Indonesian hyphenation |
 | `times` | Times New Roman font |
+| `mdframed` | Coloured text boxes in response-reviewer template |
+| `xcolor` | Custom colours in response-reviewer template |
+| `parskip` | Paragraph spacing in surat-pengantar template |

@@ -1,0 +1,130 @@
+%============================================================
+%  LEX v3.0 — Template Surat Pengantar Submission Jurnal
+%  Gunakan file ini saat mengirimkan naskah ke jurnal
+%  Isi setiap placeholder [ ] sebelum dikirim
+%============================================================
+
+\documentclass[12pt,a4paper]{article}
+
+%--- Paket utama ---
+\usepackage[bahasa]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=2.5cm]{geometry}
+\usepackage{setspace}
+\singlespacing
+\usepackage{parskip}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+
+%============================================================
+\begin{document}
+
+%------------------------------------------------------------
+%  KANAN ATAS: Kota dan Tanggal
+%------------------------------------------------------------
+\begin{flushright}
+  [Kota], \today
+\end{flushright}
+
+\bigskip
+
+%------------------------------------------------------------
+%  TUJUAN SURAT
+%------------------------------------------------------------
+Kepada Yth.\\
+Editor-in-Chief / Dewan Redaksi\\
+\textbf{[Nama Jurnal]}\\
+[Institusi Penerbit]\\
+[Alamat / URL Jurnal]
+
+\bigskip
+
+%------------------------------------------------------------
+%  SALAM PEMBUKA
+%------------------------------------------------------------
+Dengan hormat,
+
+\bigskip
+
+%------------------------------------------------------------
+%  PARAGRAF 1 — Identifikasi Naskah
+%------------------------------------------------------------
+Kami mengajukan naskah dengan judul \textbf{``[Judul Artikel]''} untuk dipertimbangkan
+diterbitkan pada \textit{[Nama Jurnal]} (\textit{[ISSN/e-ISSN]}). Naskah ini
+% Hapus salah satu pilihan di bawah (artikel penelitian ATAU artikel konseptual)
+merupakan artikel penelitian/artikel konseptual
+di bidang hukum [bidang spesifik, misal: hukum tata negara / hukum pidana / hukum internasional],
+dengan panjang sekitar [X] kata (tidak termasuk abstrak dan daftar pustaka).
+
+\bigskip
+
+%------------------------------------------------------------
+%  PARAGRAF 2 — Ringkasan Kontribusi (Novelty)
+%  Copilot: gunakan /research-gap untuk mengisi bagian ini
+%------------------------------------------------------------
+Artikel ini menganalisis [masalah hukum utama] dengan menggunakan kerangka Asas-Teori-Doktrin
+(ATD). Kontribusi utama naskah ini adalah: pertama, [novelty 1]; kedua, [novelty 2]; dan
+ketiga, [novelty 3]. Temuan ini belum dibahas secara memadai dalam literatur yang ada,
+sebagaimana ditunjukkan dalam kajian pustaka kami.
+
+\bigskip
+
+%------------------------------------------------------------
+%  PARAGRAF 3 — Pernyataan Etika dan Eksklusivitas
+%------------------------------------------------------------
+Kami menyatakan bahwa:
+\begin{enumerate}
+  \item Naskah ini merupakan karya orisinal, bebas plagiarisme, dan belum pernah
+        diterbitkan atau sedang dalam proses review di jurnal lain.
+  \item Seluruh penulis telah menyetujui isi naskah dan urutan nama penulis.
+  \item Tidak terdapat konflik kepentingan yang perlu diungkapkan.
+  \item Penelitian ini [tidak memerlukan / telah memperoleh] persetujuan etik
+        dari [nama komite etik, jika ada].
+\end{enumerate}
+
+\bigskip
+
+%------------------------------------------------------------
+%  PARAGRAF 4 — Saran Reviewer (opsional, tapi dianjurkan)
+%------------------------------------------------------------
+Kami menyarankan beberapa nama yang kompeten untuk menelaah naskah ini (opsional):
+\begin{itemize}
+  \item [Nama Reviewer 1] — [Institusi] (\texttt{[email@institusi.ac.id]})
+  \item [Nama Reviewer 2] — [Institusi] (\texttt{[email@institusi.ac.id]})
+\end{itemize}
+
+\bigskip
+
+%------------------------------------------------------------
+%  PARAGRAF 5 — Penutup
+%------------------------------------------------------------
+Kami berharap naskah ini memenuhi standar keilmuan \textit{[Nama Jurnal]} dan layak untuk
+ditelaah lebih lanjut. Kami siap memberikan klarifikasi ataupun revisi sesuai masukan
+dewan redaksi dan reviewer.
+
+\bigskip
+
+Hormat kami,
+
+\vspace{2em}
+
+\noindent
+[Nama Penulis Korespondensi]\\
+[Jabatan / Program Studi]\\
+[Nama Institusi]\\
+Telp./WA: [Nomor Telepon]\\
+Surel: \href{mailto:[email@institusi.ac.id]}{[email@institusi.ac.id]}\\
+ORCID: \href{https://orcid.org/[ORCID-ID]}{https://orcid.org/[ORCID-ID]}
+
+\bigskip
+\hrule
+\medskip
+{\footnotesize
+\textbf{Penulis Lain:}\\
+[Nama Penulis 2] — [Institusi] (\texttt{[email]})\\
+[Nama Penulis 3] — [Institusi] (\texttt{[email]})
+}
+
+\end{document}

@@ -1,0 +1,191 @@
+%============================================================
+%  LEX v3.0 — Template Respons Reviewer (Revise & Resubmit)
+%  Perintah Copilot: /response-reviewer [nomor komentar]
+%  Salin file ini dan isi sesuai komentar reviewer Anda
+%============================================================
+
+\documentclass[12pt,a4paper]{article}
+
+%--- Paket utama ---
+\usepackage[bahasa]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+%--- Format & Warna ---
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+
+%--- Kotak komentar reviewer ---
+\mdfdefinestyle{reviewerbox}{%
+  backgroundcolor = gray!10,
+  linecolor       = gray!60,
+  linewidth       = 1pt,
+  leftmargin      = 0pt,
+  rightmargin     = 0pt,
+  innerleftmargin = 8pt,
+  innerrightmargin= 8pt,
+  innertopmargin  = 6pt,
+  innerbottommargin=6pt,
+  skipabove       = 6pt,
+  skipbelow       = 4pt,
+}
+
+%--- Kotak respons penulis ---
+\mdfdefinestyle{authorbox}{%
+  backgroundcolor = blue!5,
+  linecolor       = blue!50,
+  linewidth       = 1pt,
+  leftmargin      = 0pt,
+  rightmargin     = 0pt,
+  innerleftmargin = 8pt,
+  innerrightmargin= 8pt,
+  innertopmargin  = 6pt,
+  innerbottommargin=6pt,
+  skipabove       = 4pt,
+  skipbelow       = 8pt,
+}
+
+%============================================================
+\begin{document}
+
+%------------------------------------------------------------
+%  HEADER SURAT RESPONS
+%------------------------------------------------------------
+\begin{center}
+  {\Large\bfseries Respons terhadap Komentar Reviewer}\\[0.5em]
+  {\large [Judul Naskah]}\\[0.3em]
+  \textit{Manuscript ID: [ID Naskah]} \quad Tanggal: \today
+\end{center}
+
+\bigskip
+
+Kepada Yth.\\
+Editor [Nama Jurnal]
+
+\medskip
+
+Terima kasih atas kesempatan untuk merevisi naskah kami. Kami telah menelaah seluruh komentar
+reviewer dan melakukan revisi secara menyeluruh. Dokumen ini menyajikan respons terhadap
+setiap komentar secara berurutan. Perubahan dalam naskah ditandai dengan warna biru
+(\textcolor{blue}{teks revisi}) agar mudah dilacak.
+
+\bigskip
+\hrule
+\bigskip
+
+%============================================================
+%  REVIEWER 1
+%============================================================
+\section*{Reviewer 1}
+
+%------------------------------------------------------------
+%  Komentar 1.1
+%  Perintah Copilot: /response-reviewer 1.1
+%------------------------------------------------------------
+\noindent\textbf{Komentar 1.1}
+\begin{mdframed}[style=reviewerbox]
+  \textit{[Salin teks komentar reviewer di sini persis seperti aslinya.]}
+\end{mdframed}
+
+\noindent\textbf{Respons Penulis:}
+\begin{mdframed}[style=authorbox]
+  % USER: Jalankan /response-reviewer 1.1 di Copilot Chat untuk menghasilkan respons ini.
+  % Copilot akan mengikuti struktur: tindakan revisi → lokasi perubahan → argumen penjelas (jika ada penolakan).
+
+  Kami menerima komentar ini. Revisi dilakukan pada \textbf{Bagian [X], halaman [Y], paragraf [Z]}:
+
+  \medskip
+  \textcolor{blue}{\textit{``[Teks revisi yang ditambahkan/diubah dalam naskah]''}}
+
+  \medskip
+  [Penjelasan singkat mengapa revisi ini menjawab komentar reviewer.]
+\end{mdframed}
+
+%------------------------------------------------------------
+%  Komentar 1.2
+%------------------------------------------------------------
+\noindent\textbf{Komentar 1.2}
+\begin{mdframed}[style=reviewerbox]
+  \textit{[Salin teks komentar reviewer di sini.]}
+\end{mdframed}
+
+\noindent\textbf{Respons Penulis:}
+\begin{mdframed}[style=authorbox]
+  % USER: Jalankan /response-reviewer 1.2 di Copilot Chat untuk menghasilkan respons ini.
+\end{mdframed}
+
+%------------------------------------------------------------
+%  Tambahkan blok Komentar/Respons di atas untuk setiap
+%  komentar Reviewer 1 yang tersisa
+%------------------------------------------------------------
+
+\bigskip
+\hrule
+\bigskip
+
+%============================================================
+%  REVIEWER 2
+%============================================================
+\section*{Reviewer 2}
+
+%------------------------------------------------------------
+%  Komentar 2.1
+%------------------------------------------------------------
+\noindent\textbf{Komentar 2.1}
+\begin{mdframed}[style=reviewerbox]
+  \textit{[Salin teks komentar reviewer di sini.]}
+\end{mdframed}
+
+\noindent\textbf{Respons Penulis:}
+\begin{mdframed}[style=authorbox]
+  % USER: Jalankan /response-reviewer 2.1 di Copilot Chat untuk menghasilkan respons ini.
+\end{mdframed}
+
+%------------------------------------------------------------
+%  Tambahkan blok Komentar/Respons di atas untuk setiap
+%  komentar Reviewer 2 yang tersisa
+%------------------------------------------------------------
+
+\bigskip
+\hrule
+\bigskip
+
+%============================================================
+%  RINGKASAN PERUBAHAN (Change Summary Table)
+%  Bantu editor melacak semua revisi dalam satu tabel
+%============================================================
+\section*{Ringkasan Perubahan Naskah}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{} c p{3.2cm} p{3.2cm} p{4cm} @{}}
+\toprule
+\textbf{No.} & \textbf{Komentar} & \textbf{Lokasi Revisi} & \textbf{Tindakan} \\
+\midrule
+1.1 & [Ringkasan komentar] & Bagian X, hal.\ Y   & [Diterima / Ditolak — alasan] \\
+\addlinespace
+1.2 & [Ringkasan komentar] & Bagian X, hal.\ Y   & [Diterima / Ditolak — alasan] \\
+\addlinespace
+2.1 & [Ringkasan komentar] & Bagian X, hal.\ Y   & [Diterima / Ditolak — alasan] \\
+\bottomrule
+\end{tabular}
+\caption{Tabel Ringkasan Respons terhadap Komentar Reviewer}
+\end{table}
+
+\bigskip
+
+\noindent Hormat kami,\\[0.8em]
+[Nama Penulis Korespondensi]\\
+[Institusi]\\
+[Email]
+
+\end{document}
