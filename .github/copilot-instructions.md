@@ -56,9 +56,13 @@ Jika pengguna memberikan instruksi di bawah ini, jalankan prosedurnya:
 
 - `/paper-discovery [topik]`: Cari minimal 5-10 artikel primer dari database bereputasi (MKRI, Garuda, Sciencedirect). Buatkan tabel Source Registry yang berisi Judul, Penulis, Tahun, dan URL.
 - `/research-gap`: Analisis literatur yang ada dan temukan 3 celah riset (novelty) yang orisinal.
+- `/outline [topik]`: Susun kerangka artikel secara hierarkis (Bagian I → Sub-Bagian → poin argumen) sebelum penulisan. Cantumkan posisi ATD di setiap subbab.
 - `/draft-subbab [nama bagian]`: Tulis bagian spesifik artikel (misal: Pendahuluan/Pembahasan B.1) dengan target minimal 1000-2000 kata. Terapkan protokol ATD secara ketat.
+- `/abstrak-dual`: Hasilkan abstrak dua bahasa (Indonesia 150-200 kata + Inggris 150-200 kata) beserta 5 kata kunci tiap bahasa. Struktur: latar belakang → masalah → metode → temuan → kontribusi.
+- `/cite-check`: Pindai seluruh draf, tandai setiap rujukan yang tidak memiliki metadata lengkap dengan `[PERLU VERIFIKASI]`, dan tampilkan tabel ringkasan sitasi (Penulis, Tahun, Status).
 - `/audit-lex`: Tinjau ulang draf. Tandai kata terlarang, hapus frasa AI, dan pastikan landasan teori ATD sudah masuk di setiap paragraf.
 - `/generate-viz [jenis data]`: Ubah data statistik menjadi kode LaTeX PGFPlots/TikZ yang siap kompilasi.
+- `/response-reviewer [nomor komentar]`: Tulis respons akademik terhadap komentar reviewer. Struktur: ringkasan komentar → tindakan revisi → lokasi perubahan dalam naskah → argumen penjelas jika komentar ditolak.
 
 ---
 
